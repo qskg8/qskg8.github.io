@@ -57,33 +57,91 @@
     <div class="language-switch">
         <a href="#" onclick="toggleLanguage('zh')">中文</a> / <a href="#" onclick="toggleLanguage('en')">English</a>
     </div>
-    <h1>ETH钱包暴力破解碰撞程序</h1>
+    <h1 id="title-zh">ETH钱包暴力破解碰撞程序</h1>
+    <h1 id="title-en" style="display: none;">ETH Wallet Brute Force Crack Collision Program</h1>
     <div class="features">
-        <p>软件特点：</p>
+        <p id="features-zh">软件特点：</p>
+        <p id="features-en" style="display: none;">Software Features:</p>
         <ul>
-            <li>自动检查ETH钱包地址余额。</li>
-            <li>支持添加多个RPC节点，提高程序稳定性。</li>
-            <li>友好的界面，支持导入和导出RPC节点列表。</li>
+            <li id="feature1-zh">自动检查ETH钱包地址余额。</li>
+            <li id="feature1-en" style="display: none;">Automatically check ETH wallet address balance.</li>
+            <li id="feature2-zh">支持添加多个RPC节点，提高程序稳定性。</li>
+            <li id="feature2-en" style="display: none;">Support adding multiple RPC nodes to enhance program stability.</li>
+            <li id="feature3-zh">友好的界面，支持导入和导出RPC节点列表。</li>
+            <li id="feature3-en" style="display: none;">User-friendly interface, support importing and exporting RPC node lists.</li>
         </ul>
     </div>
     <div class="program-image">
         <img src="https://raw.githubusercontent.com/qskg8/qskg8.github.io/89fffa0dc936e7129a300778184a16eb68952479/1719472104034.png" alt="程序展示图">
     </div>
-    <p>打赏赞助：</p>
+    <p id="donate-zh">打赏赞助：</p>
+    <p id="donate-en" style="display: none;">Donate:</p>
     <ul>
-        <li>ETH：0x042ce53c4e305c5ad5415fef5ef4b415a48d199d</li>
-        <li>BTC：37TvGkvgTjKAmHW6ziFJ13VCVHbxMePdoy</li>
-        <li>USDT：TZ355he1WXfiHwZGJKNCEvj4xygib87ayr</li>
+        <li id="eth-address">ETH：0x042ce53c4e305c5ad5415fef5ef4b415a48d199d</li>
+        <li id="btc-address" style="display: none;">BTC: 37TvGkvgTjKAmHW6ziFJ13VCVHbxMePdoy</li>
+        <li id="usdt-address" style="display: none;">USDT: TZ355he1WXfiHwZGJKNCEvj4xygib87ayr</li>
     </ul>
-    <p>请点击下方按钮下载程序：</p>
-    <a href="https://xtcx1.lanzouu.com/b03j4zg6j" class="btn" target="_blank">下载ETH钱包暴力破解碰撞程序</a>
-    <p>如果您对软件有任何建议或问题，请加入我们的电报群：</p>
-    <a href="https://t.me/btc88888eeth" class="btn" target="_blank">加入电报群</a>
+    <p id="download-zh">请点击下方按钮下载程序：</p>
+    <p id="download-en" style="display: none;">Please click the button below to download the program:</p>
+    <a href="https://xtcx1.lanzouu.com/b03j4zg6j" class="btn" target="_blank" id="download-btn-zh">下载ETH钱包暴力破解碰撞程序</a>
+    <a href="https://xtcx1.lanzouu.com/b03j4zg6j" class="btn" target="_blank" id="download-btn-en" style="display: none;">Download ETH Wallet Brute Force Crack Collision Program</a>
+    <p id="telegram-zh">如果您对软件有任何建议或问题，请加入我们的电报群：</p>
+    <p id="telegram-en" style="display: none;">If you have any suggestions or questions about the software, please join our Telegram group:</p>
+    <a href="https://t.me/btc88888eeth" class="btn" target="_blank" id="telegram-link-zh">加入电报群</a>
+    <a href="https://t.me/btc88888eeth" class="btn" target="_blank" id="telegram-link-en" style="display: none;">Join Telegram Group</a>
 
     <script>
         function toggleLanguage(lang) {
-            // Placeholder for language toggle functionality
-            alert('切换到' + lang + '语言');
+            // 根据语言切换显示或隐藏对应的元素
+            if (lang === 'zh') {
+                document.getElementById('title-zh').style.display = 'block';
+                document.getElementById('title-en').style.display = 'none';
+                document.getElementById('features-zh').style.display = 'block';
+                document.getElementById('features-en').style.display = 'none';
+                document.getElementById('feature1-zh').style.display = 'block';
+                document.getElementById('feature1-en').style.display = 'none';
+                document.getElementById('feature2-zh').style.display = 'block';
+                document.getElementById('feature2-en').style.display = 'none';
+                document.getElementById('feature3-zh').style.display = 'block';
+                document.getElementById('feature3-en').style.display = 'none';
+                document.getElementById('donate-zh').style.display = 'block';
+                document.getElementById('donate-en').style.display = 'none';
+                document.getElementById('download-zh').style.display = 'block';
+                document.getElementById('download-en').style.display = 'none';
+                document.getElementById('download-btn-zh').style.display = 'inline-block';
+                document.getElementById('download-btn-en').style.display = 'none';
+                document.getElementById('telegram-zh').style.display = 'block';
+                document.getElementById('telegram-en').style.display = 'none';
+                document.getElementById('telegram-link-zh').style.display = 'inline-block';
+                document.getElementById('telegram-link-en').style.display = 'none';
+                document.getElementById('eth-address').style.display = 'block';
+                document.getElementById('btc-address').style.display = 'none';
+                document.getElementById('usdt-address').style.display = 'none';
+            } else if (lang === 'en') {
+                document.getElementById('title-zh').style.display = 'none';
+                document.getElementById('title-en').style.display = 'block';
+                document.getElementById('features-zh').style.display = 'none';
+                document.getElementById('features-en').style.display = 'block';
+                document.getElementById('feature1-zh').style.display = 'none';
+                document.getElementById('feature1-en').style.display = 'block';
+                document.getElementById('feature2-zh').style.display = 'none';
+                document.getElementById('feature2-en').style.display = 'block';
+                document.getElementById('feature3-zh').style.display = 'none';
+                document.getElementById('feature3-en').style.display = 'block';
+                document.getElementById('donate-zh').style.display = 'none';
+                document.getElementById('donate-en').style.display = 'block';
+                document.getElementById('download-zh').style.display = 'none';
+                document.getElementById('download-en').style.display = 'block';
+                document.getElementById('download-btn-zh').style.display = 'none';
+                document.getElementById('download-btn-en').style.display = 'inline-block';
+                document.getElementById('telegram-zh').style.display = 'none';
+                document.getElementById('telegram-en').style.display = 'block';
+                document.getElementById('telegram-link-zh').style.display = 'none';
+                document.getElementById('telegram-link-en').style.display = 'inline-block';
+                document.getElementById('eth-address').style.display = 'none';
+                document.getElementById('btc-address').style.display = 'block';
+                document.getElementById('usdt-address').style.display = 'block';
+            }
         }
     </script>
 </body>
