@@ -7,25 +7,19 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0; /* 去除页面默认的边距 */
-            padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
+            margin: 0;
+            padding: 0;
         }
         h1 {
             color: #333;
             text-align: center;
-            margin-top: 0; /* 去除标题上方的空白 */
-        }
-        p {
-            margin-bottom: 20px;
+            margin-top: 20px;
         }
         .features {
             margin-bottom: 20px;
+            text-align: center;
         }
         .btn {
-            display: inline-block;
             padding: 10px 20px;
             background-color: #007bff;
             color: #fff;
@@ -37,22 +31,28 @@
         .btn:hover {
             background-color: #0056b3;
         }
+
         /* 轮播容器样式 */
         .carousel-container {
             position: relative;
             width: 100%;
-            max-width: 100%;
+            height: 100vh; /* 设置轮播图的高度为视窗高度 */
             overflow: hidden;
-            margin-top: 20px;
         }
+
         .carousel-images {
             display: flex;
             transition: transform 0.5s ease;
+            height: 100%; /* 保证图片填满整个轮播容器 */
         }
+
         .carousel-images img {
             width: 100%;
-            height: auto;
+            height: 100%;
+            object-fit: cover; /* 保持图片的宽高比，且不会变形 */
         }
+
+        /* 轮播按钮样式 */
         .carousel-button {
             position: absolute;
             top: 50%;
@@ -63,12 +63,15 @@
             border: none;
             cursor: pointer;
         }
+
         .prev {
             left: 10px;
         }
+
         .next {
             right: 10px;
         }
+
     </style>
 </head>
 <body>
@@ -84,7 +87,7 @@
         </ul>
     </div>
 
-    <!-- 图片轮播部分 -->
+    <!-- 大图轮播部分 -->
     <div class="carousel-container">
         <div class="carousel-images">
             <img src="/1719472104034.png" alt="程序展示图1">
