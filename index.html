@@ -84,18 +84,23 @@
             box-shadow: 0 4px 8px rgba(74, 107, 255, 0.3);
         }
         
+        /* 修改图片容器样式，使图片更大 */
         .compact-carousel {
-            height: 180px;
+            height: 300px; /* 增大高度 */
             border-radius: 8px;
             overflow: hidden;
             margin: 15px 0;
             position: relative;
             background: #eef2f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
+        /* 修改图片样式，确保图片不被缩小 */
         .compact-carousel img {
-            width: 100%;
-            height: 100%;
+            max-width: 100%;
+            max-height: 100%;
             object-fit: contain;
         }
         
@@ -139,6 +144,11 @@
             .compact-container {
                 padding: 15px;
             }
+            
+            /* 移动端也保持大图片 */
+            .compact-carousel {
+                height: 250px;
+            }
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -167,6 +177,7 @@
             </div>
         </div>
         
+        <!-- 大图片轮播区域 -->
         <div class="compact-carousel">
             <img src="/1719472104034.png" alt="程序截图">
         </div>
@@ -198,7 +209,7 @@
     </div>
 
     <script>
-        // 简单图片轮换
+        // 图片轮换功能
         const carousel = document.querySelector('.compact-carousel');
         const images = [
             '/1719472104034.png',
@@ -209,7 +220,7 @@
         
         function rotateImage() {
             currentImg = (currentImg + 1) % images.length;
-            carousel.innerHTML = `<img src="${images[currentImg]}" alt="程序截图">`;
+            carousel.innerHTML = `<img src="${images[currentImg]}" alt="程序截图" style="max-width:100%; max-height:100%; object-fit:contain;">`;
         }
         
         // 每5秒切换一次图片
