@@ -119,9 +119,9 @@
             currentSlide += step;
 
             if (currentSlide >= totalSlides) {
-                currentSlide = 0;
+                currentSlide = 0; // 如果是最后一张，跳到第一张
             } else if (currentSlide < 0) {
-                currentSlide = totalSlides - 1;
+                currentSlide = totalSlides - 1; // 如果是第一张，跳到最后一张
             }
 
             document.querySelector(".carousel-images").style.transform = `translateX(-${currentSlide * 100}%)`;
