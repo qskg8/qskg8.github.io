@@ -12,37 +12,56 @@
             padding: 20px;
             max-width: 800px;
             margin: 0 auto;
+            background-color: #f4f4f4;
+            color: #333;
         }
         h1 {
             color: #333;
             text-align: center;
             margin-top: 0;
+            font-size: 32px;
+            margin-bottom: 20px;
         }
         p {
             margin-bottom: 20px;
+            font-size: 16px;
         }
         .features {
-            margin-bottom: 20px;
+            margin-bottom: 40px;
         }
         .btn {
             display: inline-block;
-            padding: 10px 20px;
+            padding: 12px 24px;
             background-color: #007bff;
             color: #fff;
             text-decoration: none;
             border-radius: 5px;
             text-align: center;
-            margin-top: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
         }
         .btn:hover {
             background-color: #0056b3;
         }
-        /* 图片轮播样式 */
+        .btn-container {
+            text-align: center;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        ul li {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
         .program-image {
             text-align: center;
-            margin-top: 20px;
+            margin-top: 30px;
             position: relative;
-            overflow: hidden; /* 隐藏超出的图片 */
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
         .carousel {
             display: flex;
@@ -51,16 +70,29 @@
         .carousel img {
             max-width: 100%;
             height: auto;
+            border-radius: 10px;
         }
-        /* 用于控制轮播过渡效果 */
-        @keyframes slide {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-100%); }
+        /* 加入背景渐变 */
+        .program-image {
+            background: #fff;
+        }
+        /* 优化按钮和文本的排列 */
+        .reward ul {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .reward ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+        .reward ul li a {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <h1>区块猴碰撞程序大全</h1>
+    
     <div class="features">
         <p>软件特点：</p>
         <ul>
@@ -81,15 +113,23 @@
     </div>
 
     <p>打赏赞助：（ps捐献一点吧，一直为爱发电更新）</p>
-    <ul>
-        <li>ETH：0x042ce53c4e305c5ad5415fef5ef4b415a48d199d</li>
-        <li>BTC：37TvGkvgTjKAmHW6ziFJ13VCVHbxMePdoy</li>
-        <li>USDT：TZ355he1WXfiHwZGJKNCEvj4xygib87ayr</li>
-    </ul>
+    <div class="reward">
+        <ul>
+            <li>ETH：<a href="ethereum:0x042ce53c4e305c5ad5415fef5ef4b415a48d199d">0x042ce53c4e305c5ad5415fef5ef4b415a48d199d</a></li>
+            <li>BTC：<a href="bitcoin:37TvGkvgTjKAmHW6ziFJ13VCVHbxMePdoy">37TvGkvgTjKAmHW6ziFJ13VCVHbxMePdoy</a></li>
+            <li>USDT：<a href="tether:TZ355he1WXfiHwZGJKNCEvj4xygib87ayr">TZ355he1WXfiHwZGJKNCEvj4xygib87ayr</a></li>
+        </ul>
+    </div>
+
     <p>请点击下方按钮下载程序：</p>
-    <a href="https://xtcx1.lanzouu.com/b03j4zg6j" class="btn" target="_blank">下载ETH钱包2.0碰撞程序</a>
+    <div class="btn-container">
+        <a href="https://xtcx1.lanzouu.com/b03j4zg6j" class="btn" target="_blank">下载ETH钱包2.0碰撞程序</a>
+    </div>
+    
     <p>如果您对软件有任何建议或问题，请加入我们的电报群：</p>
-    <a href="https://t.me/eth18188" class="btn" target="_blank">加入电报群</a>
+    <div class="btn-container">
+        <a href="https://t.me/eth18188" class="btn" target="_blank">加入电报群</a>
+    </div>
 
     <script>
         // 设置图片轮播的间隔时间
